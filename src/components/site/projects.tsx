@@ -1,0 +1,116 @@
+import { ArrowUpRight } from "lucide-react";
+import { Reveal, RevealStagger, revealItem } from "./reveal";
+import { SectionLabel } from "./section-divider";
+import { motion } from "framer-motion";
+
+const DRIVE = "https://drive.google.com/drive/folders/1nkgf0TeMjfrtQ1yZYuSylM1EYT3HLgAu?usp=sharing";
+
+const projects = [
+  {
+    n: "01",
+    name: "Local Business E-Commerce Suite",
+    desc: "Full-stack store with payments, inventory & admin dashboard.",
+    tags: ["React", "Node.js", "MongoDB"],
+    grad: "linear-gradient(135deg, #00D4FF, #6366F1)",
+  },
+  {
+    n: "02",
+    name: "High-Converting Landing Pages",
+    desc: "Conversion-optimised pages with A/B testing & analytics.",
+    tags: ["HTML/CSS", "JS", "SEO"],
+    grad: "linear-gradient(135deg, #6366F1, #8B5CF6)",
+  },
+  {
+    n: "03",
+    name: "Social Media Growth Engine",
+    desc: "Scheduling, analytics & influencer coordination system.",
+    tags: ["Python", "Automation", "SMM"],
+    grad: "linear-gradient(135deg, #00D4FF, #4F46E5)",
+  },
+  {
+    n: "04",
+    name: "Personal Fitness Coaching Platform",
+    desc: "Workout plans, progress tracking & client messaging.",
+    tags: ["React", "Firebase"],
+    grad: "linear-gradient(135deg, #7C3AED, #00D4FF)",
+  },
+  {
+    n: "05",
+    name: "AI-Powered Copywriting Tool",
+    desc: "Generates ad copy & email campaigns using AI.",
+    tags: ["Python", "AI", "Copywriting"],
+    grad: "linear-gradient(135deg, #6366F1, #00D4FF)",
+  },
+  {
+    n: "06",
+    name: "Web Security Audit Suite",
+    desc: "Vulnerability scanning, DNS analysis & security reports.",
+    tags: ["Python", "Cybersecurity"],
+    grad: "linear-gradient(135deg, #4F46E5, #00D4FF)",
+  },
+];
+
+export function Projects() {
+  return (
+    <section id="projects" className="relative py-28 md:py-36">
+      <div className="mx-auto max-w-7xl px-6">
+        <Reveal>
+          <SectionLabel>// Our Work</SectionLabel>
+        </Reveal>
+        <div className="mt-4 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <Reveal delay={0.05}>
+            <h2 className="font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+              Projects That <span className="text-gradient">Speak.</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <a
+              href={DRIVE}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-white/70 transition hover:text-[color:var(--cyan)]"
+            >
+              Explore our works on Google Drive <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </Reveal>
+        </div>
+
+        <RevealStagger className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p) => (
+            <motion.article
+              key={p.n}
+              variants={revealItem}
+              transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+              className="glass hover-lift group flex flex-col overflow-hidden rounded-2xl"
+            >
+              <div className="relative h-32 overflow-hidden" style={{ background: p.grad }}>
+                <div className="dot-grid absolute inset-0 opacity-30" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[color:var(--background)]/80 to-transparent" />
+                <span className="absolute left-5 top-4 font-mono text-xs text-white/80">{p.n}</span>
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="font-display text-xl font-bold leading-snug">{p.name}</h3>
+                <p className="mt-2 text-sm text-white/60">{p.desc}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.tags.map((t) => (
+                    <span key={t} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] text-white/70">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href={DRIVE}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[color:var(--cyan)] transition group-hover:gap-2.5"
+                >
+                  View Project <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </div>
+            </motion.article>
+          ))}
+        </RevealStagger>
+      </div>
+    </section>
+  );
+}
