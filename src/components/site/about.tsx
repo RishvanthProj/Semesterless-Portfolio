@@ -38,7 +38,7 @@ export function About() {
                   className="relative z-10 h-[78%] w-[78%] rounded-2xl object-cover shadow-2xl"
                 />
                 <div className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.4em] text-white/70">
-                  THE BEST DIGITAL GROWTH AGENCY
+                  THE BEST
                 </div>
               </div>
             </div>
