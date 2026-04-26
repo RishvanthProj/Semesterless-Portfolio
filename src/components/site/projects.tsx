@@ -2,12 +2,12 @@ import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealStagger, revealItem } from "./reveal";
 import { SectionLabel } from "./section-divider";
 import { motion } from "framer-motion";
-import projectEcom from "@/assets/project-ecom.png";
+import projectEcom from "@/assets/project-ecom.jpg";
 import projectFitness from "@/assets/project-fitness.jpg";
-import projectBrand from "@/assets/project-brand.png";
-import projectRestaurant from "@/assets/project-restaurant.png";
-import projectSocialmedia from "@/assets/project-socialmedia.png";
-import projectPortfolio from "@/assets/project-portfolio.png";
+import projectBrand from "@/assets/project-brand.jpg";
+import projectRestaurant from "@/assets/project-restaurant.jpg";
+import projectSocialmedia from "@/assets/project-socialmedia.jpg";
+import projectPortfolio from "@/assets/project-portfolio.jpg";
 
 const DRIVE = "https://drive.google.com/drive/folders/1nkgf0TeMjfrtQ1yZYuSylM1EYT3HLgAu?usp=sharing";
 
