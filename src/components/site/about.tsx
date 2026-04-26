@@ -1,5 +1,6 @@
 import { Reveal } from "./reveal";
 import { SectionLabel } from "./section-divider";
+import rishLogo from "@/assets/rish-logo.jpg";
 
 const tags = [
   "Web Dev",
@@ -31,13 +32,13 @@ export function About() {
                   className="absolute -inset-10 opacity-50 blur-3xl"
                   style={{ background: "var(--gradient-orb-cyan)" }}
                 />
-                <div className="relative z-10 text-center">
-                  <div className="font-display text-[10rem] font-extrabold leading-none text-gradient">
-                    SL
-                  </div>
-                  <div className="mt-4 font-mono text-xs uppercase tracking-[0.4em] text-white/60">
-                    Est. 2022
-                  </div>
+                <img
+                  src={rishLogo}
+                  alt="Rish SMMA — Rishvanth A logo"
+                  className="relative z-10 h-[78%] w-[78%] rounded-2xl object-cover shadow-2xl"
+                />
+                <div className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.4em] text-white/70">
+                  Est. 2022
                 </div>
               </div>
             </div>

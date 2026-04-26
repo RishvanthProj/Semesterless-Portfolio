@@ -3,22 +3,22 @@ import { SectionLabel } from "./section-divider";
 
 const items = [
   {
-    period: "2022 – Present",
-    role: "Founder & Lead Developer",
+    period: "2022 – Now",
+    role: "Founder & Lead",
     org: "SEMESTERLESS",
-    desc: "Founded and scaled a freelance digital agency for local businesses. End-to-end web, e-commerce, social media & consulting.",
+    desc: "Founded and scaled a founder-led digital studio for local businesses. End-to-end web, e-commerce, social media, AI & consulting.",
   },
   {
     period: "2021 – 2022",
-    role: "Freelance Full Stack Developer",
-    org: "Independent, Remote",
-    desc: "Built React + Node.js apps for small business owners. Specialised in responsive UIs and cloud deployments.",
+    role: "Freelancer & Webpage Design Builder",
+    org: "Independent · Remote",
+    desc: "Designed and built responsive websites and landing pages for small business owners across India. Focused on conversion-first UI and clean cloud deployments.",
   },
   {
     period: "2020 – 2021",
-    role: "Digital Marketing Specialist",
-    org: "Local Clients, Tamil Nadu",
-    desc: "Social media management, ad campaigns, copywriting & micro-influencer coordination for regional brands.",
+    role: "Freelancer & Certified No-Code Developer",
+    org: "Local Clients · Tamil Nadu",
+    desc: "Shipped no-code websites, automations and digital storefronts for early-stage clients while earning industry no-code certifications.",
   },
 ];
 
