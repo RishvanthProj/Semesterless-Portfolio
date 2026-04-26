@@ -1,10 +1,11 @@
 import { useState, type FormEvent } from "react";
-import { Mail, MapPin, Briefcase, Github, Linkedin, ArrowRight } from "lucide-react";
-import { toast } from "sonner";
+import { Mail, MapPin, Briefcase, Instagram, MessageCircle, ArrowRight } from "lucide-react";
 import { Reveal } from "./reveal";
 import { SectionLabel } from "./section-divider";
 
 const DRIVE = "https://drive.google.com/drive/folders/1nkgf0TeMjfrtQ1yZYuSylM1EYT3HLgAu?usp=sharing";
+const WHATSAPP_NUMBER = "916383672133";
+const INSTAGRAM_URL = "https://www.instagram.com/rish.smma/";
 
 export function Contact() {
   const [submitting, setSubmitting] = useState(false);
@@ -12,13 +13,21 @@ export function Contact() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") || "");
+    const email = String(data.get("email") || "");
+    const service = String(data.get("service") || "");
+    const message = String(data.get("message") || "");
+    const text =
+      `Hi Rishvanth, I'd like to work with SEMESTERLESS.\n\n` +
+      `*Name:* ${name}\n*Email:* ${email}\n*Service:* ${service}\n\n*Message:*\n${message}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
     setTimeout(() => {
       setSubmitting(false);
-      (e.target as HTMLFormElement).reset();
-      toast.success("Message sent!", {
-        description: "Thanks — Rishvanth will reply within 24 hours.",
-      });
-    }, 700);
+      form.reset();
+    }, 600);
   };
 
   return (
@@ -55,6 +64,20 @@ export function Contact() {
                   <div className="mt-1 text-base font-semibold text-white">Tamil Nadu, India · Remote Worldwide</div>
                 </div>
               </div>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noreferrer"
+                className="glass hover-lift flex items-start gap-4 rounded-2xl p-6"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[color:var(--cyan)]/15 text-[color:var(--cyan)]">
+                  <MessageCircle className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-white/50">WhatsApp</div>
+                  <div className="mt-1 text-base font-semibold text-white">+91 63836 72133</div>
+                </div>
+              </a>
               <a href={DRIVE} target="_blank" rel="noreferrer" className="glass hover-lift flex items-start gap-4 rounded-2xl p-6">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[color:var(--cyan)]/15 text-[color:var(--cyan)]">
                   <Briefcase className="h-5 w-5" />
@@ -66,22 +89,22 @@ export function Contact() {
               </a>
               <div className="mt-2 flex gap-3">
                 <a
-                  href="https://github.com"
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="GitHub"
-                  className="glass hover-lift flex h-12 w-12 items-center justify-center rounded-xl text-white/80"
+                  aria-label="Instagram"
+                  className="glass hover-lift flex h-12 w-12 items-center justify-center rounded-xl text-white/80 transition hover:text-[color:var(--cyan)]"
                 >
-                  <Github className="h-5 w-5" />
+                  <Instagram className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="LinkedIn"
-                  className="glass hover-lift flex h-12 w-12 items-center justify-center rounded-xl text-white/80"
+                  aria-label="WhatsApp"
+                  className="glass hover-lift flex h-12 w-12 items-center justify-center rounded-xl text-white/80 transition hover:text-[color:var(--cyan)]"
                 >
-                  <Linkedin className="h-5 w-5" />
+                  <MessageCircle className="h-5 w-5" />
                 </a>
               </div>
             </div>
