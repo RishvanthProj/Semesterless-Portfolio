@@ -136,10 +136,10 @@ export function Contact() {
                 className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[color:var(--cyan)] py-4 text-sm font-bold text-[color:var(--background)] transition hover:brightness-110 disabled:opacity-70"
                 style={{ boxShadow: "0 12px 32px -10px oklch(0.85 0.18 220 / 0.7)" }}
               >
-                {submitting ? "Sending…" : "Send Message"} <ArrowRight className="h-4 w-4" />
+                {submitting ? "Opening WhatsApp…" : "Send Message on WhatsApp"} <ArrowRight className="h-4 w-4" />
               </button>
               <p className="text-center text-xs text-white/50">
-                Usually responds within 24 hours.
+                Opens a chat on WhatsApp · usually responds within 24 hours.
               </p>
             </form>
           </Reveal>
