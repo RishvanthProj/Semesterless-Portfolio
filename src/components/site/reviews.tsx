@@ -17,10 +17,10 @@ const reviews = [
     initials: "VM",
   },
   {
-    text: "Our Instagram grew from 800 to 8,000 followers in 2 months. The content quality and consistency is just outstanding.",
-    name: "Sathya P.",
-    role: "Director · SP Bakery Chain, Salem",
-    initials: "SP",
+     text: "Best Fitness Trainer, Helped me lose 13Kgs in 3 months.",
+    name: "Dhayanithi S.",
+    role: "Student - Fitness",
+    initials: "D",
   },
 ];
 
