@@ -22,7 +22,7 @@ export function Skills() {
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
-            Services that <span className="text-gradient">Move the Needle.</span>
+            SERVICES WE{" "}<span className="text-gradient">PROVIDE</span>
           </h2>
         </Reveal>
         <Reveal delay={0.1}>

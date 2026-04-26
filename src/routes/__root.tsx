@@ -29,14 +29,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "SEMESTERLESS — We Don't Wait for Semesters to Start." },
+      { name: "description", content: "SEMESTERLESS is a founder-led digital growth studio by Rishvanth A — web, e-commerce, social media & AI for small businesses." },
+      { name: "author", content: "Rishvanth A" },
+      { property: "og:title", content: "SEMESTERLESS — Digital Growth Studio" },
+      { property: "og:description", content: "We build. We grow. We deliver. A lean, founder-led studio led by Rishvanth A, Tamil Nadu, India." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@semesterless" },
     ],
     links: [
       {

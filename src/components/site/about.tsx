@@ -38,7 +38,7 @@ export function About() {
                   className="relative z-10 h-[78%] w-[78%] rounded-2xl object-cover shadow-2xl"
                 />
                 <div className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.4em] text-white/70">
-                  Est. 2022
+                  THE BEST DIGITAL GROWTH AGENCY
                 </div>
               </div>
             </div>
@@ -51,25 +51,23 @@ export function About() {
           </Reveal>
           <Reveal delay={0.05}>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight md:text-6xl">
-              Not a course. Not a college.{" "}
-              <span className="text-gradient">Just Results.</span>
+              Where Strategy Meets{" "}
+              <span className="text-gradient">Excellence.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-white/70 md:text-lg">
               <p>
-                SEMESTERLESS was born from the belief that your semester doesn't determine your
-                success. We're a founder-led digital studio based in Tamil Nadu, India, working with
-                small and local businesses to give them an unfair online advantage.
+                SEMESTERLESS works with businesses that want practical, result-driven digital
+                solutions, not unnecessary complexity.
               </p>
               <p>
-                We don't just build websites. We build growth engines — landing pages that convert,
-                e-commerce stores that scale, social media strategies that engage, and systems that
-                work while you sleep.
+                We design and build websites, online stores, and marketing systems that help
+                businesses reach more people, generate leads, and grow steadily.
               </p>
               <p>
-                Led by <span className="text-white">Rishvanth A</span>, our team combines full stack
-                development, AI automation, ethical security, and marketing — all under one roof.
+                With <span className="text-white">Rishvanth A</span> leading the work, every project
+                is handled with a clear focus on what actually works for the business.
               </p>
             </div>
           </Reveal>

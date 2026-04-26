@@ -20,7 +20,7 @@ export function Hero() {
           transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
           className="font-mono text-xs uppercase tracking-[0.3em] text-[color:var(--cyan)]"
         >
-          — Available for Freelance Projects
+          Available for Freelance Projects
         </motion.div>
 
         <h1 className="mt-6 font-display font-bold leading-[0.95] tracking-tight">
@@ -66,8 +66,10 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.7 }}
           className="mt-4 text-sm text-white/50"
         >
-          Founded &amp; led by{" "}
-          <span className="text-white">Rishvanth A</span> · Full Stack Developer &amp; Growth Strategist
+          Founded &amp; Led by{" "}
+          <span className="text-white">Rishvanth A</span>
+          <br />
+          Freelancer &amp; Business Growth Strategist cum professor.
         </motion.p>
 
         <motion.div
@@ -108,12 +110,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 md:flex">
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/50">Scroll</span>
-        <div className="relative h-10 w-px bg-white/20">
-          <span className="animate-scroll-bounce absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-[color:var(--cyan)]" />
-        </div>
-      </div>
+
     </section>
   );
 }
